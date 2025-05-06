@@ -3,6 +3,9 @@ import { allPosts } from '../data/posts.js';
 export function renderPosts() {
     const postsContainer = document.querySelector('.posts');
 
+    // Clear old posts to not duplicate
+    postsContainer.innerHTML = '';
+
     allPosts.forEach((post) => {
         const postCard = document.createElement("div");
         postCard.classList.add("card");
@@ -20,6 +23,6 @@ export function renderPosts() {
             <i class="fas fa-share"></i><span>${post.shares}</span>
         </div>`;
 
-        postsContainer.appendChild(postCard);
+        postsContainer.prepend(postCard);
     });
 }

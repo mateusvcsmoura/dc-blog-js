@@ -23,6 +23,31 @@
         <!-- Floating Action Button -->
         <button class="fab"><i class="fas fa-plus"></i></button>
     </div>
+    <!-- Formulário Pop-up -->
+    <div class="popup-form hidden">
+        <div class="form-content">
+            <h2 class="inter-700">Novo Post</h2>
+            <input type="text" placeholder="Título" class="input" id="post-title" />
+            <textarea placeholder="Conteúdo" class="input" id="post-content"></textarea>
+            <div class="form-actions">
+                <button id="cancelBtn" class="btn cancel">Cancelar</button>
+                <button id="submitBtn" class="btn submit">Postar</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const fab = document.querySelector(".fab");
+        const popup = document.querySelector(".popup-form");
+        const cancelBtn = document.getElementById("cancelBtn");
+
+        fab.addEventListener("click", () => {
+            popup.classList.remove("hidden");
+        });
+
+        cancelBtn.addEventListener("click", () => {
+            popup.classList.add("hidden");
+        });
+    </script>
 </body>
 
 </html>

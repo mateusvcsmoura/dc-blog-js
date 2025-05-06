@@ -3,5 +3,7 @@ export function isLogged() {
 
     if (window.sessionStorage.getItem("isLogged")) {
         loginStateDiv.innerHTML = "<img src='https://i.pravatar.cc/40' alt='Profile' class='profile-pic' />";
+
+        return true;
     }
 }
