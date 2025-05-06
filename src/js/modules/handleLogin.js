@@ -15,6 +15,8 @@ export function loginHandler(ev) {
 
         const newUser = new User(username.value, email.value, password.value);
 
+        window.sessionStorage.setItem('userData', JSON.stringify(newUser));
+
         return window.location.href = "./index.html";
     }
 
