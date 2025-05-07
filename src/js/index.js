@@ -5,6 +5,7 @@ import { renderPosts } from './modules/renderPosts.js';
 import { allPosts } from './data/posts.js';
 import { likePost } from './modules/likePost.js';
 import { sharePost } from './modules/sharePost.js';
+import { deletePost } from './modules/deletePost.js';
 
 const submitBtn = document.getElementById("submitBtn");
 
@@ -49,5 +50,7 @@ document.querySelector('.posts').addEventListener('click', function (ev) {
         likePost(ev);
     } else if (ev.target.classList.contains('fa-share')) {
         sharePost(ev);
+    } else if (ev.target.classList.contains('fa-trash')) {
+        deletePost(ev);
     }
 });
