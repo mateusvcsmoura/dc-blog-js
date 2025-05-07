@@ -23,6 +23,8 @@ export function renderPosts() {
             <i class="fas fa-share"></i><span>${post.shares}</span>
         </div>`;
 
+        postCard.setAttribute('data-id', post.id);
+
         postsContainer.prepend(postCard);
     });
 }
