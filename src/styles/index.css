@@ -191,3 +191,35 @@ textarea.input {
 i:hover {
     cursor: pointer;
 }
+
+.comment-box {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #eaeaea;
+    border-radius: 8px;
+}
+
+.comment-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.cancel-comment {
+    background-color: #aaa;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.submit-comment {
+    background-color: #1f1f1f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+    cursor: pointer;
+}

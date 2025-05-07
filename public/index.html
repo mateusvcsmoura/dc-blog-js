@@ -47,6 +47,13 @@
         cancelBtn.addEventListener("click", () => {
             popup.classList.add("hidden");
         });
+
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('cancel-comment')) {
+                const commentBox = e.target.closest('.comment-box');
+                commentBox.remove(); // removes comment div
+            }
+        });
     </script>
 </body>
 

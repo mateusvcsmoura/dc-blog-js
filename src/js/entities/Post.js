@@ -1,5 +1,6 @@
 import { idCounter } from '../modules/idCounter.js';
 import { getDate } from '../modules/getDate.js';
+import { Comment } from './Comment.js'
 
 class Post {
     #userLiked;
