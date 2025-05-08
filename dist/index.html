@@ -1,0 +1,18 @@
+<!doctype html><html lang="pt-br"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>DC Blog</title><link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/><script defer="defer" src="main.bundle.js"></script></head><body><div class="app"><div class="topbar"><h1 class="inter-700">DC Blog</h1><div id="loginState"><a href="login.html" target="_self" rel="noopener noreferrer" class="link inter-400">Login</a></div></div><div class="posts"></div><button class="fab"><i class="fas fa-plus"></i></button></div><div class="popup-form hidden"><div class="form-content"><h2 class="inter-700">Novo Post</h2><input placeholder="Título" class="input" id="post-title"/> <textarea placeholder="Conteúdo" class="input" id="post-content"></textarea><div class="form-actions"><button id="cancelBtn" class="btn cancel">Cancelar</button> <button id="submitBtn" class="btn submit">Postar</button></div></div></div><script>const fab = document.querySelector(".fab");
+        const popup = document.querySelector(".popup-form");
+        const cancelBtn = document.getElementById("cancelBtn");
+
+        fab.addEventListener("click", () => {
+            popup.classList.remove("hidden");
+        });
+
+        cancelBtn.addEventListener("click", () => {
+            popup.classList.add("hidden");
+        });
+
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('cancel-comment')) {
+                const commentBox = e.target.closest('.comment-box');
+                commentBox.remove(); // removes comment div
+            }
+        });</script></body></html>
