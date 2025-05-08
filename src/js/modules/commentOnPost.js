@@ -5,6 +5,7 @@ import { renderPosts } from "./renderPosts.js";
 export function commentOnPost(ev) {
     if (!isLogged()) {
         window.alert('you need to log in before commenting on posts');
+        return;
     }
 
     const commentContent = document.querySelector('.comment-input').value;

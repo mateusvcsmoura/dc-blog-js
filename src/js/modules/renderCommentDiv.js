@@ -1,7 +1,10 @@
 import { commentOnPost } from "./commentOnPost";
+import { renderExistingComments } from "./renderExistingComments";
+import { findPost } from "./findPost";
 
 export function renderCommentDiv(ev) {
     const postCard = ev.target.closest('.card');
+    const post = findPost(ev);
 
     if (postCard.querySelector('.comment-box')) return; // if the input is already displayed
 
@@ -16,7 +19,11 @@ export function renderCommentDiv(ev) {
 
     postCard.insertAdjacentHTML('beforeend', commentDiv);
 
+    if (post.comments.length > 0) {
+        renderExistingComments(ev);
+    }
+
     document.querySelector('.submit-comment').addEventListener('click', (ev) => {
         return commentOnPost(ev);
-    })
+    });
 }
